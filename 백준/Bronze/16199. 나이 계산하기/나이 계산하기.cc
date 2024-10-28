@@ -2,9 +2,6 @@
 using namespace std;
 
 int sol(int (*date)[3]) {
-    // 생년과 기준 연도가 동일하면 0살
-    if(date[1][0] == date[0][0]) return 0;
-    // 생일 전
     if(date[1][1] < date[0][1] || date[1][1] == date[0][1] && date[1][2] < date[0][2]) return date[1][0] - date[0][0] - 1;
     return date[1][0] - date[0][0];
 }
